@@ -1,0 +1,14 @@
+#!/bin/sh
+
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.php$')
+
+if [ -n "$FILES" ]; then
+	docker-compose exec -ti --user=web app composer run pre-commit
+
+	if [ $? -ne 0 ]; then
+		echo "Pre commit failed. please fix the errors first."
+		exit 1
+	fi
+
+	git add $FILES
+fi
