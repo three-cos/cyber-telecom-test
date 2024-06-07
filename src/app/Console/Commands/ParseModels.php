@@ -12,7 +12,7 @@ use Throwable;
 
 class ParseModels extends Command
 {
-    protected $signature = 'app:parse-models {remoteModelsPage}';
+    protected $signature = 'app:parse-models {remoteModelsPage : drom.ru models page}';
 
     protected $description = 'Command description';
 
