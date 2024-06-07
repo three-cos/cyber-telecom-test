@@ -7,7 +7,7 @@ use App\Services\Parsing\CarModel\DromRu\ValueObjects\CarModelPage;
 use InvalidArgumentException;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
-use Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class CarModelPageParserTest extends TestCase
 {
